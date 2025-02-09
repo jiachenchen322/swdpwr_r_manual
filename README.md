@@ -35,7 +35,13 @@ swdpower(K, design, family, model, link, type, meanresponse_start, meanresponse_
 ## 5. Details
 This function `swdpower` performs power calculations for stepped wedge cluster randomized trials under different scenarios (presented in Section 1). 
 ### A note on assumptions on time effects
-The default setting assumes no time effect, meaning the anticipated mean response in the control group at the end of the study (`meanresponse_end0`) is equal to that at the start of the study (`meanresponse_start`). To incorporate time effects, you can manually set `meanresponse_start` and `meanresponse_end0` to different values. For a model with time effects but approximating a "zero time trend", this can be achieved by setting `meanresponse_start` and `meanresponse_end0` to values that are close but slightly different, such as `meanresponse_start = x` and `meanresponse_end0 = x + 0.001` (with the difference being greater than 1e-5).
+The default setting assumes no time effect, meaning the anticipated mean response in the control group at the end of the study (`meanresponse_end0`) is equal to that at the start of the study (`meanresponse_start`). To incorporate time effects, you need to manually set `meanresponse_start` and `meanresponse_end0` to different values. For a model with time effects but approximating a "zero time trend", this can be achieved by setting `meanresponse_start` and `meanresponse_end0` to values that are close but slightly different, such as `meanresponse_start = x` and `meanresponse_end0 = x + 0.001` (with the difference being greater than 1e-5).
+### Another note on specifying `meanresponse_start`, `meanresponse_end0`, `meanresponse_end1`, and/or `effectsize_beta`
+`effectsize_beta` is the anticipated effect size, just omit this parameter if you don’t need to specify it. 
+In all scenarios, you can choose to specify the three parameters about mean responses without specifying this effect size `effectsize_beta`, or alternatively specify `meanresponse_start`, `meanresponse_end0` and `effectsize_beta`. For continuous outcomes, users can conduct power calculations by only specifying `effectsize_beta` without the other three parameters about mean responses (as the power is dependent just
+on it), then calculation will be implemented assuming scenarios without time
+effects. If you would consider scenarios with time effects and continuous outcomes, please specify `meanresponse_start`, `meanresponse_end0` (do not require
+accurate information, just make sure they are not equal) and this `effectsize_beta`.
 
 ## 6. Return
 The object returned by function `swdpower` has a class of `swdpower`, which includes a list of the design matrix and a summary of this design (including the power).
