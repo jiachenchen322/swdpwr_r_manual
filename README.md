@@ -31,6 +31,7 @@ swdpower(K, design, family, model, link, type, meanresponse_start, meanresponse_
 ```
 ## 4. Arguments
 <img src="argument_BIS629.png" alt="argument" height="600">
+
 adapted from YSPH BIS629 course materials.
 
 ## 5. Details
