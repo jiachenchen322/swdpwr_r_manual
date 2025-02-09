@@ -30,7 +30,8 @@ library(swdpwr)
 swdpower(K, design, family, model, link, type, meanresponse_start, meanresponse_end0, meanresponse_end1, effectsize_beta, sigma2, typeIerror, alpha0, alpha1, alpha2)
 ```
 ## 4. Arguments
-<img src="argument.png" alt="argument" height="600">
+<img src="argument_BIS629.png" alt="argument" height="600">
+adapted from YSPH BIS629 course materials.
 
 ## 5. Details
 This function `swdpower` performs power calculations for stepped wedge cluster randomized trials under different scenarios (presented in Section 1). 
