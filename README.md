@@ -65,7 +65,7 @@ Fitting the model with all above required inputs in R:
 ```r
 library("swdpwr")
 dataset = matrix(c(rep(c(0, 1, 1), 6), rep(c(0, 0, 1), 6)), 12, 3, byrow = TRUE)
-swdpower(K = 50, design = data, family = "binomial", model = "conditional", link = "identity", type = "cross-sectional", meanresponse_start = 0.2, meanresponse_end0 = 0.25,
+swdpower(K = 50, design = dataset, family = "binomial", model = "conditional", link = "identity", type = "cross-sectional", meanresponse_start = 0.2, meanresponse_end0 = 0.25,
 meanresponse_end1 = 0.38, typeIerror = 0.05, alpha0 = 0.01, alpha1 = 0.01)
 ```
 
