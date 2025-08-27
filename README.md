@@ -171,7 +171,7 @@ Power for this scenario is 1 for the alternative hypothesis treatment effect bet
 
 
 ## 8. Citation
-If you use our ONDSA R package in your research, please cite our related publication/software (https://doi.org/10.1016/j.cmpb.2021.106522).
+If you use our swdpwr software in your research, please cite our related publication/software (https://doi.org/10.1016/j.cmpb.2021.106522).
 Chen, J., Zhou, X., Li, F., & Spiegelman, D. (2022). swdpwr: A SAS macro and an R package for power calculations in stepped wedge cluster randomized trials. Computer methods and programs in biomedicine, 213, 106522.
 
 ## 9. Contact
